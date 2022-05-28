@@ -17,7 +17,11 @@
 
         <header>
             <div class="logo">
-                <a href="#"><img src="images/Logo-big.svg" alt="Head.-logo"></a>
+                <a href="#"><picture>
+                    <source media="(max-width: 800px )" srcset="./images/logo-small.svg">
+                    <source media="(min-width: 1001px )" srcset="./images/logo-big.svg">
+                    <img src="images/logo-big.svg" alt="head.logo">
+                </picture></a>
                 
                 </div>
             <nav>
@@ -31,7 +35,17 @@
             <div class="text"><p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. <br>Donec viverra eleifend lacus, vitae ullamcor.</p></div>
         </div>
 
-        <div class="image-container"><img src="images/horses.jpg" alt="horses"></div>
+        <div class="image-container">
+            <picture>
+                <source media="(max-width: 800px )" srcset="./images/horses-small.svg">
+                <source media="(max-width: 1000px )" srcset="./images/horses-middle.svg">
+                <source media="(min-width: 1001px )" srcset="./images/horses.jpg">
+                <img src="images/horses.jpg" alt="horses">
+            </picture>
+            </div>
+            
+            
+            
     
     </div>
 </body>
