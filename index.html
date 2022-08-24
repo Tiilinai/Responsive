@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Poppins:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <title>Patagonia</title>
@@ -16,19 +17,21 @@
     <div class="grid">
 
         <header>
-            <div class="logo">
-                <a href="#"><picture>
+            <div class="navigation" id="nav-bar">
+                <a href="index.html"><picture>
                     <source media="(max-width: 800px )" srcset="./images/logo-small.svg">
                     <source media="(min-width: 1001px )" srcset="./images/logo-big.svg">
                     <img src="images/logo-big.svg" alt="head.logo">
                 </picture></a>
                 
+                
+                        <a class="links" href="#">Works</a>
+                        <a class="links" href="#">Services</a>
+                        <a class="links" href="#">Contacts</a>
+                        <a class="icon" onclick="burgerMenu()">
+                        <i class="fa fa-bars"></i>
+                        </a>
                 </div>
-            <nav>
-                <li><a href="#">Works</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contacts</a></li>
-            </nav>
         </header>
         <div class="main">
             <div class="title"><h1>Patagonia</h1></div>
@@ -44,9 +47,18 @@
             </picture>
             </div>
             
-            
-            
+        </div>
+
+    <script>
+        function burgerMenu() {
+            let burger = document.getElementById("nav-bar");
+            if (burger.className === "navigation") {
+            burger.className += "responsive";
+            } else {
+            burger.className = "navigation";
+            }
+        }
+        </script>
     
-    </div>
 </body>
 </html>
